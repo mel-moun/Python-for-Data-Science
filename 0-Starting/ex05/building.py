@@ -1,5 +1,6 @@
 import sys
 
+
 def get_input() -> str:
     """ Prompts the user for input and returns the input string.
     Keeps asking until a non-empty string is entered. """
@@ -11,6 +12,7 @@ def get_input() -> str:
                 return user_input
         except (EOFError, KeyboardInterrupt):
             return ""
+
 
 def sum_characters(string):
     """ Analyzes the given string and counts the number of uppercase letters,
@@ -35,7 +37,7 @@ def sum_characters(string):
             digits += 1
         elif x.isspace():
             spaces += 1
-    
+
     total = len(string)
     print("The text contains", total, "characters:")
     print(upper, "upper letters")
@@ -43,6 +45,7 @@ def sum_characters(string):
     print(punct, "punctuation marks")
     print(spaces, "spaces")
     print(digits, "digits")
+
 
 def main():
     """ Main function to handle input and call the analysis function.
@@ -54,7 +57,7 @@ def main():
     try:
         if len(sys.argv) > 2:
             raise AssertionError("more than one argument is provided")
-     
+
         if len(sys.argv) == 1:
             user_input = get_input()
         else:
@@ -65,6 +68,7 @@ def main():
 
     except Exception as e:
         print(f"AssertionError: {e}")
+
 
 if __name__ == "__main__":
     main()
