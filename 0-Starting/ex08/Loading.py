@@ -5,7 +5,7 @@ def ft_tqdm(lst: range) -> None:
     total = len(lst)
 
     i = 0
-    bar_length = 60
+    bar_length = 200
     for item in lst:
         progress = (i + 1) / total
 
