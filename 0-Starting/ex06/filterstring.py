@@ -1,4 +1,3 @@
-from ft_filter import ft_filter
 import sys
 
 
@@ -12,7 +11,7 @@ def main():
         except ValueError:
             raise AssertionError("the arguments are bad")
 
-        filtered = ft_filter(lambda word: len(word) > num, sys.argv[1].split())
+        filtered = [word for word in sys.argv[1].split() if len(word) > num]
         print(filtered)
 
     except AssertionError as e:
