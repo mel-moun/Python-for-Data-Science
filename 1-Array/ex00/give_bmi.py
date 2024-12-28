@@ -7,17 +7,23 @@ def give_bmi(
 ) -> list[int | float]:
     try:
         if len(height) != len(weight):
-            raise ValueError("bad arguments")
+            raise AssertionError("bad arguments")
+
+        for x in range(len(height)):
+            if (
+                type(height[x]) not in (int, float)
+                or type(weight[x]) not in (int, float)
+            ):
+                raise AssertionError("bad arguments")
 
         height_np = np.array(height)
         weight_np = np.array(weight)
 
         BMI_np = weight_np / (height_np ** 2)
-
         return BMI_np.tolist()
 
-    except ValueError as e:
-        print(f"Error: {e}")
+    except AssertionError as e:
+        print(f"AssertionError: {e}")
         return []
 
 
