@@ -1,18 +1,26 @@
-from typing import Union
+import numpy as np
 
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+
+def give_bmi(
+    height: list[int | float],
+    weight: list[int | float]
+) -> list[int | float]:
     try:
-        assert len(height) == len(weight), "bad arguments"
-    except AssertionError as e:
-        print(f"AssertionError: {e}")
+        if len(height) != len(weight):
+            raise ValueError("bad arguments")
 
-    BMI = list()
-    for i in range(len(height)):
-        BMI.append(weight[i] / (height[i] ** 2))
-    return BMI
+        height_np = np.array(height)
+        weight_np = np.array(weight)
+
+        BMI_np = weight_np / (height_np ** 2)
+
+        return BMI_np.tolist()
+
+    except ValueError as e:
+        print(f"Error: {e}")
+        return []
+
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
-    boolean = list()
-    for i in range(len(bmi)):
-        boolean.append(bmi[i] > limit)
-    return boolean
+    bmi_array = np.array(bmi)
+    return (bmi_array > limit).tolist()
