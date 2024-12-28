@@ -1,0 +1,15 @@
+
+en.subject.pdf
+
+.DS_Store
+
+todo*
+documentation*
+
+script.py
+
+__pycache__
+
+myenv
+
+subject.txt
