@@ -9,6 +9,6 @@ def slice_me(family: list, start: int, end: int) -> list:
         family_sl = family_np[start:end]
         print("My new shape is:", family_sl.shape)
         return family_sl.tolist()
-    
+
     except Exception as e:
         print(type(e).__name__, ":", e)
