@@ -18,3 +18,4 @@ def ft_load(path: str) -> np.ndarray:
 
     except BaseException as e:
         print(type(e).__name__, ":", e)
+      
