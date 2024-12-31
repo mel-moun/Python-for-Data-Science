@@ -6,15 +6,11 @@ def ft_load(path: str) -> np.ndarray:
     try:
         img = Image.open(path)
 
-        if img.mode != 'RGB':
-            img = img.convert('RGB')
+        img = img.convert("RGB")
+        img_np = np.array(img)
 
-        img_array = np.array(img)
-
-        print(f"The shape of image is: {img_array.shape}")
-
-        print(img_array)
-        return img_array
+        print(f"The shape of image is: {img_np.shape}")
+        return img_np
 
     except BaseException as e:
         print(type(e).__name__, ":", e)
