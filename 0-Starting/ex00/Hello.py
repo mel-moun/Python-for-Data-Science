@@ -6,13 +6,13 @@ ft_dict = {"Hello" : "titi!"}
 ft_list[1] = "World!"
 
 y = list(ft_tuple)
-y[1] = "France!"
+y[1] = "Morocco!"
 ft_tuple = tuple(y)
 
 ft_set.remove("tutu!")
-ft_set.add('Paris!')
+ft_set.add('Tétouan!')
 
-ft_dict["Hello"] = "42Paris!"
+ft_dict["Hello"] = "1337Med!"
 
 print(ft_list)
 print(ft_tuple)
