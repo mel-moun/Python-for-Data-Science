@@ -12,9 +12,9 @@ def main():
         rows, cols = sliced_img.shape
         rotated_img = np.zeros((cols, rows), dtype=sliced_img.dtype)
 
-        for i in range(rows):
-            for j in range(cols):
-                rotated_img[cols - j - 1][i] = sliced_img[i][j]
+        for y in range(rows):
+            for x in range(cols):
+                rotated_img[x][y] = sliced_img[y][x]
 
         print("New shape after Rotation:", rotated_img.shape)
         print(rotated_img)
