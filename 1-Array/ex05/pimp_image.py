@@ -40,7 +40,6 @@ def ft_blue(array: np.ndarray) -> np.ndarray:
     ft_display(blue, "Blue")
     return blue
 
-
 def ft_grey(array: np.ndarray) -> np.ndarray:
     height = len(array)
     width = len(array[0])
