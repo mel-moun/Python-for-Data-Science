@@ -11,4 +11,4 @@ ft_green(array)
 ft_blue(array)
 ft_grey(array)
 
-# print(ft_invert.__doc__)
+print(ft_invert.__doc__)

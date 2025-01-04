@@ -3,6 +3,7 @@ import numpy as np
 
 
 def ft_invert(array: np.ndarray) -> np.ndarray:
+    """Inverts the color of the image received."""
     try:
         inverted = 255 - array
         print(array)
