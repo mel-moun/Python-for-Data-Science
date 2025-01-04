@@ -33,7 +33,12 @@ def ft_green(array: np.ndarray) -> np.ndarray:
     return green
 
 def ft_blue(array: np.ndarray) -> np.ndarray:
-    pass
+    blue = array.copy()
+    blue[:, :, 0] = 0
+    blue[:, :, 1] = 0
+    ft_display(blue, "Blue")
+    return blue
+
 
 def ft_grey(array: np.ndarray) -> np.ndarray:
     pass
