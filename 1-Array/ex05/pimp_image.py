@@ -19,10 +19,9 @@ def ft_display(array: np.ndarray, title: str):
 
 def ft_red(array: np.ndarray) -> np.ndarray:
     red = array.copy()
-    for i in range(red.shape[0]):
-        for j in range(red.shape[1]):
-            red[i, j, 1] = 0
-            red[i, j, 2] = 0
+    red[:, :, 1] = 0
+    red[:, :, 2] = 0
     ft_display(red, "Red")
     return red
+
 
