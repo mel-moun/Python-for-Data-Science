@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def load(path: str):
     if path is None:
         return None
