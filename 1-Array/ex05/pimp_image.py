@@ -25,3 +25,16 @@ def ft_red(array: np.ndarray) -> np.ndarray:
     return red
 
 
+def ft_green(array: np.ndarray) -> np.ndarray:
+    green = array.copy()
+    green[:, :, 0] = 0
+    green[:, :, 2] = 0
+    ft_display(green, "Green")
+    return green
+
+def ft_blue(array: np.ndarray) -> np.ndarray:
+    pass
+
+def ft_grey(array: np.ndarray) -> np.ndarray:
+    pass
+
