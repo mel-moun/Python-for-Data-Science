@@ -32,6 +32,7 @@ def ft_green(array: np.ndarray) -> np.ndarray:
     ft_display(green, "Green")
     return green
 
+
 def ft_blue(array: np.ndarray) -> np.ndarray:
     blue = array.copy()
     blue[:, :, 0] = 0
@@ -41,5 +42,13 @@ def ft_blue(array: np.ndarray) -> np.ndarray:
 
 
 def ft_grey(array: np.ndarray) -> np.ndarray:
-    pass
+    height = len(array)
+    width = len(array[0])
+    grey = np.zeros((height, width, 3), dtype=np.uint8)
 
+    for y in range(height):
+        for x in range(width):
+            grey[y][x] = array[y][x][1:2]
+
+    ft_display(grey, "Grey")
+    return grey
