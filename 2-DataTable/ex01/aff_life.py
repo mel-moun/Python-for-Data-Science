@@ -15,6 +15,7 @@ def main():
     plt.title(str(country.name) + ' life expectancy projections')
     plt.xlabel('Year')
     plt.ylabel('Life Expectancy')
+    plt.legend(['Life Expectancy'])
     plt.show()
 
 
