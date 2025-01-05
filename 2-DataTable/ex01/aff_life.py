@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 
 
 def main():
-    pass
+    df = load("../life_expectancy_years.csv")
+    print(df)
 
 if __name__ == '__main__':
     main()
