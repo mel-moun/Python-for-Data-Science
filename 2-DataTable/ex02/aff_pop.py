@@ -5,8 +5,10 @@ import numpy as np
 
 
 def change_suffix(x):
-    if isinstance(x, str):
-        x = x.replace('M', 'e+06').replace('k', 'e+03')
+    try:
+        x = str(x).replace('M', 'e+06').replace('k', 'e+03')
+    except AttributeError:
+        pass
     return x
 
 
@@ -18,16 +20,16 @@ def main():
     try:
         data = load("../population_total.csv")
 
-        country_data = data.loc[['Belgium', 'France']]
-        country_data = country_data.applymap(change_suffix) \
+        country = data.loc[['Belgium', 'France']]
+        country = country.applymap(change_suffix) \
             .astype('float64') \
             .transpose()
 
-        country_data.index = country_data.index.astype(np.int64)
-        country_data = country_data[country_data.index >= 1800]
-        country_data = country_data[country_data.index <= 2050]
+        country.index = country.index.astype(np.int64)
+        country = country[country.index >= 1800]
+        country = country[country.index <= 2050]
 
-        ax = sns.lineplot(data=country_data, dashes=False, palette=['b', 'g'])
+        ax = sns.lineplot(data=country, dashes=False, palette=['b', 'g'])
         plt.xlabel('Year')
         plt.ylabel('Population')
         plt.xticks(np.arange(1800, 2050, 40))
@@ -38,8 +40,7 @@ def main():
         plt.show()
 
     except Exception as e:
-        print(f"{e.__class__.__name__}: {e}")
-        return None
+        print(type(e).__name__, ":", e)
 
 
 if __name__ == "__main__":
