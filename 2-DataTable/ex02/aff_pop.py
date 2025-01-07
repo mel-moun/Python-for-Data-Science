@@ -20,7 +20,7 @@ def main():
     try:
         data = load("../population_total.csv")
 
-        country = data.loc[['Belgium', 'France']]
+        country = data.loc[['Belgium', 'Morocco']]
         country = country.applymap(suffix) \
             .astype('float64') \
             .transpose()
