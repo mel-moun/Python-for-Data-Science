@@ -16,6 +16,10 @@ def change_y(x, pos):
     return str(int(round(x / 1e6, 0))) + "M"
 
 
+
+       
+
+
 def main():
     try:
         data = load("../population_total.csv")
