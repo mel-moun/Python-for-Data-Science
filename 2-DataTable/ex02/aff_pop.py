@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def change_suffix(x):
+def suffix(x):
     try:
         x = str(x).replace('M', 'e+06').replace('k', 'e+03')
     except AttributeError:
@@ -12,7 +12,7 @@ def change_suffix(x):
     return x
 
 
-def y_formatter(x, pos):
+def change_y(x, pos):
     return str(int(round(x / 1e6, 0))) + "M"
 
 
@@ -21,7 +21,7 @@ def main():
         data = load("../population_total.csv")
 
         country = data.loc[['Belgium', 'France']]
-        country = country.applymap(change_suffix) \
+        country = country.applymap(suffix) \
             .astype('float64') \
             .transpose()
 
@@ -34,7 +34,7 @@ def main():
         plt.ylabel('Population')
         plt.xticks(np.arange(1800, 2050, 40))
         plt.yticks(np.arange(20000000, 80000000, 20000000))
-        ax.yaxis.set_major_formatter(y_formatter)
+        ax.yaxis.set_major_formatter(change_y)
         plt.legend(loc='lower right')
         plt.title('Population Projections')
         plt.show()
