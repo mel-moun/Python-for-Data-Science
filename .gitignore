@@ -15,3 +15,7 @@ myenv
 1-Array/ex05/vscode.deb
 
 subject.txt
+
+load_csv.py
+population_total.csv
+tester.py
