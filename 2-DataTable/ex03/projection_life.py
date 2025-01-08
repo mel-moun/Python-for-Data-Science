@@ -1,8 +1,8 @@
 from load_csv import load
 import seaborn as sns
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
+
 
 def suffix(x):
     try:
@@ -18,7 +18,9 @@ def change_x(x, pos):
 
 def main():
     try:
-        gdp = load("../income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
+        gdp = load(
+            "../income_per_person_gdppercapita_ppp_inflation_adjusted.csv"
+        )
         expectancy = load("../life_expectancy_years.csv")
 
         gdp_1900 = gdp.loc[:, '1900'].apply(suffix).astype('float64')
