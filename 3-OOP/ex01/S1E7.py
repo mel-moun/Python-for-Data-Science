@@ -36,3 +36,7 @@ class Lannister(Character):
 
     def die(self):
         self.is_alive = False
+
+    @classmethod
+    def create_lannister(self, first_name, is_alive):
+        return Lannister(first_name, is_alive)
