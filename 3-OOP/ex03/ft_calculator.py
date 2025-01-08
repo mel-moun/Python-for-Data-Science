@@ -10,13 +10,16 @@ class calculator:
             print(type(e).__name__, ":", e)
 
     def __add__(self, object) -> None:
-        result = [x + object for x in self.vector]
-        print(result)
+        self.vector = [x + object for x in self.vector]
+        print(self.vector)
 
     def __mul__(self, object) -> None:
-        result = [x * object for x in self.vector]
-        print(result)
+        self.vector = [x * object for x in self.vector]
+        print(self.vector)
 
     def __sub__(self, object) -> None:
-        result = [x - object for x in self.vector]
-        print(result)
+        self.vector = [x - object for x in self.vector]
+        print(self.vector)
+    
+    def __truediv__(self, object) -> None:
+        pass
