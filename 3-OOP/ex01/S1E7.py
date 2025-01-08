@@ -11,3 +11,9 @@ class Baratheon(Character):
 
     def die():
         super().die()
+
+    def __str__(self):
+        return str((self.family_name, self.eyes, self.hairs))
+
+    def __repr__(self):
+        return str((self.family_name, self.eyes, self.hairs))
