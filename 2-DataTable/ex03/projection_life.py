@@ -36,9 +36,7 @@ def main():
             x='GDP per Capita (PPP, 1900)',
             y='Life Expectancy (1900)',
             data=combined_data,
-            s=100,
-            alpha=0.7,
-            edgecolor='k'
+            alpha=0.8
         )
 
         plt.title('1900', fontsize=16)
@@ -46,7 +44,6 @@ def main():
         plt.ylabel('Life Expectancy', fontsize=14)
         plt.xscale('log')
         ax.xaxis.set_major_formatter(change_x)
-        plt.grid(True, linestyle='--', alpha=0.6)
         plt.legend(['Country'], loc='upper left')
         plt.show()
 
