@@ -22,4 +22,10 @@ class calculator:
         print(self.vector)
     
     def __truediv__(self, object) -> None:
-        pass
+        try:
+            if object == 0:
+                raise AssertionError("Division by zero is not allowed.")
+            self.vector = [x / object for x in self.vector]
+            print(self.vector)
+        except BaseException as e:
+            print(type(e).__name__, ":", e)
