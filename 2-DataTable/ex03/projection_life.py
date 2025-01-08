@@ -31,7 +31,7 @@ def main():
             'Life Expectancy (1900)': life_expectancy_1900
         }).dropna()
 
-        plt.figure(figsize=(12, 8))
+        plt.figure(figsize=(6.4, 4.8))
         ax = sns.scatterplot(
             x='GDP per Capita (PPP, 1900)',
             y='Life Expectancy (1900)',
