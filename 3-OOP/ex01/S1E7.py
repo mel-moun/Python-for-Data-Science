@@ -18,3 +18,6 @@ class Baratheon(Character):
 
     def __repr__(self):
         return str((self.family_name, self.eyes, self.hairs))
+
+class Lannister(Character):
+    pass
