@@ -24,11 +24,11 @@ def main():
         expectancy = load("../life_expectancy_years.csv")
 
         gdp_1900 = gdp.loc[:, '1900'].apply(suffix).astype('float64')
-        life_expectancy_1900 = expectancy.loc[:, '1900'].astype('float64')
+        expectancy_1900 = expectancy.loc[:, '1900'].astype('float64')
 
         combined_data = pd.DataFrame({
             'GDP per Capita (PPP, 1900)': gdp_1900,
-            'Life Expectancy (1900)': life_expectancy_1900
+            'Life Expectancy (1900)': expectancy_1900
         }).dropna()
 
         plt.figure(figsize=(6.4, 4.8))
