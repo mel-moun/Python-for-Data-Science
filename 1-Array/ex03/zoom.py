@@ -3,6 +3,17 @@ import matplotlib.pyplot as plt
 
 
 def main():
+    """
+    Load an image, slice it, and display the sliced region.
+
+    The image is loaded from a given path,
+    sliced from rows 100 to 500 and columns 400 to 800,
+    and displayed using matplotlib in grayscale.
+
+    Raises:
+        BaseException: Any error during image loading,
+        slicing, or display is caught and printed.
+    """
     try:
         img = ft_load("../animal.jpeg")
         print(img)

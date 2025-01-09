@@ -4,6 +4,19 @@ import numpy as np
 
 
 def main():
+    """
+    Load an image, slice a region, rotate the sliced image, and display it.
+
+    The image is loaded from the given path,
+    sliced from rows 100 to 500 and columns 400 to 800.
+    It is then rotated by transposing the pixel values
+    (rows and columns are swapped).
+    The rotated image is displayed using matplotlib in grayscale.
+
+    Raises:
+        BaseException: Any error during image loading,
+        slicing, rotation, or display is caught and printed.
+    """
     try:
         img = ft_load("../animal.jpeg")
 
