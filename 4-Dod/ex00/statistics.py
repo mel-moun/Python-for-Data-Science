@@ -11,11 +11,11 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
             elif val == 'quartile':
                 print(val, ':', ft_quartile(args))
             elif val == 'std':
-                print(val, ":", ft_std)
+                print(val, ":", ft_std(args))
             elif val == 'var':
-                print(val, ":", ft_var)
+                print(val, ":", ft_var(args))
             else:
-                raise AssertionError("ERROR")
+                print("ERROR")
 
     except AssertionError as e:
         print(e)
@@ -50,8 +50,10 @@ def ft_quartile(args):
 
 
 def ft_std(args):
-    pass
+    var = ft_var(args)
+    return var ** 0.5
 
 
 def ft_var(args):
-    pass
+    mean = ft_mean(args)
+    return sum((x - mean) ** 2 for x in args) / len(args)
