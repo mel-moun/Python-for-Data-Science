@@ -10,6 +10,10 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
                 print(val, ':', ft_median(args))
             elif val == 'quartile':
                 print(val, ':', ft_quartile(args))
+            elif val == 'std':
+                print(val, ":", ft_std)
+            elif val == 'var':
+                print(val, ":", ft_var)
             else:
                 raise AssertionError("ERROR")
 
@@ -43,3 +47,11 @@ def ft_quartile(args):
     two = ft_median(filter(lambda x: x >= median, list_n))
 
     return [one, two]
+
+
+def ft_std(args):
+    pass
+
+
+def ft_var(args):
+    pass
