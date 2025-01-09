@@ -2,6 +2,18 @@ import sys
 
 
 def to_morse(string) -> str:
+    """
+    Converts a string to Morse code.
+
+    Args:
+    - string: A string to be converted to Morse code.
+
+    Returns:
+    - A string representing the Morse code translation.
+
+    Raises:
+    - AssertionError: If the string contains invalid characters.
+    """
     NESTED_MORSE = {
         " ": "/",
         "A": ".-",
@@ -52,6 +64,10 @@ def to_morse(string) -> str:
 
 
 def main():
+    """
+    Reads input from command line, converts it to Morse code,
+    and prints the result.
+    """
     try:
         if len(sys.argv) != 2:
             raise AssertionError("the arguments are bad")

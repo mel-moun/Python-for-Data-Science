@@ -1,6 +1,6 @@
 def ft_filter(function, iterable):
     """
-    Filters elements from iterable based on function. 
+    Filters elements from iterable based on function.
     If function is None, removes falsy values.
 
     Args:

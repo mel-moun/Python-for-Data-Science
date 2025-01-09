@@ -2,6 +2,17 @@ import sys
 
 
 def ft_tqdm(lst: range) -> None:
+    """
+    Simulates a progress bar for iterating over a list.
+
+    Args:
+    - lst: A list or range to iterate over.
+
+    Yields:
+    - Each item from the list during iteration.
+
+    Displays the progress bar in the console.
+    """
     total = len(lst)
 
     i = 0

@@ -3,7 +3,7 @@ import sys
 
 def main():
     """
-    Processes command-line arguments: filters words in the first argument 
+    Processes command-line arguments: filters words in the first argument
     based on length, using the second argument as the minimum length.
     Prints filtered words or error message if arguments are invalid.
     """
