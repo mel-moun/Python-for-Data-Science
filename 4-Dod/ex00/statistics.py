@@ -10,6 +10,8 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
                 print(val, ':', ft_median(args))
             elif val == 'quartile':
                 print(val, ':', ft_quartile(args))
+            else:
+                raise AssertionError("ERROR")
 
     except AssertionError as e:
         print(e)
