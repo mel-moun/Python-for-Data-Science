@@ -26,14 +26,13 @@ def ft_mean(args):
 def ft_median(args):
     sorted_args = sorted(args)
     n = len(sorted_args)
-    
+
     if n % 2 == 1:
         median = sorted_args[n // 2]
     else:
         mid1 = sorted_args[n // 2 - 1]
         mid2 = sorted_args[n // 2]
         median = (mid1 + mid2) / 2
-    
     return median
 
 
