@@ -1,25 +1,24 @@
 def ft_statistics(*args: any, **kwargs: any) -> None:
+    op = {
+        'mean': ft_mean,
+        'median': ft_median,
+        'quartile': ft_quartile,
+        'std': ft_std,
+        'var': ft_var,
+    }
+
     try:
-        if not args:
-            raise AssertionError("ERROR") 
+        for _, value in kwargs.items():
+            if value in op.keys():
+                if len(args) > 0:
+                    print(value, ':', op[value](args))
+                else:
+                    print('ERROR')
 
-        for x, val in kwargs.items():
-            if val == 'mean':
-                print(val, ":", ft_mean(args))
-            elif val == 'median':
-                print(val, ':', ft_median(args))
-            elif val == 'quartile':
-                print(val, ':', ft_quartile(args))
-            elif val == 'std':
-                print(val, ":", ft_std(args))
-            elif val == 'var':
-                print(val, ":", ft_var(args))
-            else:
-                print("ERROR")
+    except BaseException as e:
+        print(type(e).__name__, ':', e)
 
-    except AssertionError as e:
-        print(e)
-    
+
 def ft_mean(args):
     return sum(args) / len(args)
 
