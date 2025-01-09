@@ -5,15 +5,17 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
 
         for x, val in kwargs.items():
             if val == 'mean':
-                ft_mean(args)
+                print(val, ":", ft_mean(args))
             elif val == 'median':
-                ft_median(args)
+                print(val, ':', ft_median(args))
+            elif val == 'quartile':
+                print(val, ':', ft_quartile(args))
 
     except AssertionError as e:
         print(e)
     
 def ft_mean(args):
-    print("sum :", sum(args) / len(args))
+    return sum(args) / len(args)
 
 
 def ft_median(args):
@@ -27,4 +29,15 @@ def ft_median(args):
         mid2 = sorted_args[n // 2]
         median = (mid1 + mid2) / 2
     
-    print("median :", median)
+    return median
+
+
+def ft_quartile(args):
+    list_n = list(args)
+    list_n.sort()
+    median = ft_median(list_n)
+
+    one = ft_median(filter(lambda x: x <= median, list_n))
+    two = ft_median(filter(lambda x: x >= median, list_n))
+
+    return [one, two]
