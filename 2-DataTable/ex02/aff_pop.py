@@ -6,7 +6,8 @@ import numpy as np
 
 def suffix(x):
     """
-    Converts population values with suffixes ('M', 'k') into scientific notation.
+    Converts population values with suffixes
+    ('M', 'k') into scientific notation.
     """
     try:
         x = str(x).replace('M', 'e+06').replace('k', 'e+03')
@@ -17,14 +18,16 @@ def suffix(x):
 
 def change_y(x, pos):
     """
-    Formats y-axis tick labels to display population values in millions (e.g., '10M').
+    Formats y-axis tick labels to display
+    population values in millions (e.g., '10M').
     """
     return str(int(round(x / 1e6, 0))) + "M"
 
 
 def main():
     """
-    Visualizes population projections for selected countries using a line plot.
+    Visualizes population projections
+    for selected countries using a line plot.
     """
     try:
         data = load("../population_total.csv")
