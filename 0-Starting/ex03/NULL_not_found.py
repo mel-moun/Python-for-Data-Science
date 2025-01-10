@@ -1,7 +1,7 @@
 def NULL_not_found(object: any) -> int:
     if (object is None):
         print("Nothing:", object, type(object))
-    elif (object != object and type(object) == float): 
+    elif (object != object and type(object) == float):
         print("Cheese:", object, type(object))
     elif (type(object) is int and object == 0):
         print("Zero:", object, type(object))

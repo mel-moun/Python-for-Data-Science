@@ -10,6 +10,6 @@ def all_thing_is_obj(object: any) -> int:
         print("Dict :", x)
     elif (x is str):
         print(object, "is in the kitchen :", x)
-    else :
+    else:
         print("Type not found")
     return 42

@@ -1,7 +1,8 @@
 import sys
 
+
 def main():
-    try:       
+    try:
         if len(sys.argv) < 2:
             return
         if len(sys.argv) > 2:
@@ -19,6 +20,7 @@ def main():
 
     except AssertionError as e:
         print(f"AssertionError: {e}")
+
 
 if __name__ == "__main__":
     main()
