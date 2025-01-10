@@ -45,7 +45,7 @@ This repository contains the projects for the **Python for Data Science** Piscin
   <!-- Working with **Python’s built-in classes** -->
 - **Libraries**:
   - No external libraries required for this module, as the focus is on Python OOP concepts.
-
+           
 ### 04 - Dod (Design) 🎨
 - **Summary**: Learn about different design structures in programming and improve your code organization.
 - **Concepts Covered**:
