@@ -11,7 +11,7 @@ def ft_tqdm(lst: range) -> None:
     Displays the progress bar in the console.
     """
     total = len(lst)
-    bar_length = 50
+    bar_length = 135
 
     for i, item in enumerate(lst):
         progress = (i + 1) / total
