@@ -1,18 +1,18 @@
-# Python for Data Science - Piscine
+# Python for Data Science - Piscine 🐍📊
 
-## Overview
+## Overview 🌟
 
-This repository contains the projects for the **Python for Data Science** Piscine. Each module introduces new concepts related to Python programming, building progressively to cover various topics essential for data science. Complete each project in the specified order to validate the piscine and develop a strong foundation in Python.
+This repository contains the projects for the **Python for Data Science** Piscine. Each module introduces new concepts related to Python programming, building progressively to cover various topics essential for data science. Complete each project in the specified order to validate the piscine and develop a strong foundation in Python. 🚀
 
-## Modules
+## Modules 📚
 
-### 00 - Python Basics: Starting
+### 00 - Python Basics: Starting 🛠️
 - **Summary**: Learn the basic syntax, variables, and simple operations in Python.
 - **Concepts Covered**:
   - Python syntax
   - Variables and data types
 
-### 01 - Arrays
+### 01 - Arrays 📐
 - **Summary**: Work with arrays, their manipulations, and gain hands-on experience in image processing.
 - **Concepts Covered**:
   - List data structure in Python
@@ -23,7 +23,7 @@ This repository contains the projects for the **Python for Data Science** Piscin
   - `NumPy`: Arrays, basic operations
   - `Pillow`: Image manipulation
 
-### 02 - DataTable
+### 02 - DataTable 📊
 - **Summary**: Learn how to load, manipulate, and display data in a tabular format using Python.
 - **Concepts Covered**:
   - Introduction to **Pandas** for data manipulation
@@ -35,7 +35,7 @@ This repository contains the projects for the **Python for Data Science** Piscin
   - `Pandas`: Data manipulation and analysis
   - `Matplotlib`: Plotting data (optional for basic visualization)
 
-### 03 - Object-Oriented Programming (OOP)
+### 03 - Object-Oriented Programming (OOP) 🏗️
 - **Summary**: Understand the principles of OOP, focusing on classes, inheritance, and other key OOP concepts.
 - **Concepts Covered**:
   - Introduction to Object-Oriented Programming
@@ -46,7 +46,7 @@ This repository contains the projects for the **Python for Data Science** Piscin
 - **Libraries**:
   - No external libraries required for this module, as the focus is on Python OOP concepts.
 
-### 04 - Dod (Design)
+### 04 - Dod (Design) 🎨
 - **Summary**: Learn about different design structures in programming and improve your code organization.
 - **Concepts Covered**:
   <!-- - Design patterns and principles (e.g., Singleton, Factory, etc.) -->
