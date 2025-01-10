@@ -3,12 +3,14 @@ from S1E9 import Character
 
 class Baratheon(Character):
     """
-    Represents a member of the Baratheon family, inheriting from the Character class.
+    Represents a member of the Baratheon family,
+    inheriting from the Character class.
     """
 
     def __init__(self, first_name, is_alive=True):
         """
-        Initializes a Baratheon family member with default physical traits and a family name.
+        Initializes a Baratheon family member with
+        default physical traits and a family name.
         """
         self.first_name = first_name
         self.is_alive = is_alive
