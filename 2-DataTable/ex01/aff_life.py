@@ -3,6 +3,9 @@ from load_csv import load
 
 
 def main():
+    """
+    Visualizes the life expectancy projections for a specific country using a line plot.
+    """
     data = load('../life_expectancy_years.csv')
 
     country = 'Morocco'

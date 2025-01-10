@@ -5,6 +5,9 @@ import pandas as pd
 
 
 def suffix(x):
+    """
+    Converts GDP values with suffixes ('M', 'k') into scientific notation.
+    """
     try:
         x = str(x).replace('M', 'e+06').replace('k', 'e+03')
     except AttributeError:
@@ -13,10 +16,17 @@ def suffix(x):
 
 
 def change_x(x, pos):
+    """
+    Formats x-axis tick labels to display GDP values in thousands (e.g., '10k').
+    """
     return str(int(round(x / 1e3, 0))) + "k"
 
 
 def main():
+    """
+    Creates a scatter plot to visualize the relationship between GDP per capita 
+    and life expectancy for various countries in the year 1900.
+    """
     try:
         gdp = load(
             "../income_per_person_gdppercapita_ppp_inflation_adjusted.csv"
