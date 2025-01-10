@@ -3,7 +3,8 @@ from S1E7 import Baratheon, Lannister
 
 class King(Baratheon, Lannister):
     """
-    Represents a King, inheriting traits from both Baratheon and Lannister families.
+    Represents a King, inheriting traits
+    from both Baratheon and Lannister families.
     """
 
     def __init__(self, first_name, is_alive=True):
@@ -41,12 +42,14 @@ class King(Baratheon, Lannister):
 
     def __str__(self):
         """
-        Returns a string representation of the King's family name, eye color, and hair color.
+        Returns a string representation of the King's
+        family name, eye color, and hair color.
         """
         return str((self.family_name, self.eyes, self.hairs))
 
     def __repr__(self):
         """
-        Returns a formal string representation of the King's family name, eye color, and hair color.
+        Returns a formal string representation of the King's
+        family name, eye color, and hair color.
         """
         return str((self.family_name, self.eyes, self.hairs))
