@@ -42,15 +42,15 @@ This repository contains the projects for the **Python for Data Science** Piscin
   - Classes and objects
   - Constructors, methods, and attributes
   - Inheritance, polymorphism, and encapsulation
-  <!--- Working with **Python’s built-in classes**-- >
+  <!-- Working with **Python’s built-in classes** -->
 - **Libraries**:
   - No external libraries required for this module, as the focus is on Python OOP concepts.
 
 ### 04 - Dod (Design)
 - **Summary**: Learn about different design structures in programming and improve your code organization.
 - **Concepts Covered**:
- <!-- - Design patterns and principles (e.g., Singleton, Factory, etc.) -->
-  <!--- Structuring larger programs for maintainability-->
+  <!-- - Design patterns and principles (e.g., Singleton, Factory, etc.) -->
+  <!-- Structuring larger programs for maintainability -->
   - Introduction to **Abstract Base Classes** and **Interfaces**
   - Best practices for writing clean and reusable code
 - **Libraries**:
